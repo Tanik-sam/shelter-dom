@@ -1,0 +1,12 @@
+.wrapper{
+    max-width:$content-width;
+    margin:auto;
+
+}
+.header_wrapper{
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+    z-index: 2;
+    
+}

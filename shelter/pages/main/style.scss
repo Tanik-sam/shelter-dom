@@ -1,0 +1,93 @@
+@import  "../../assets/sass/abstract/constant";
+@import  "../../assets/sass/abstract/placeholders";
+
+@import  "../../assets/sass/base/logo";
+@import  "../../assets/sass/base/base";
+@import  "../../assets/sass/base/mixins";
+@import  "../../assets/sass/base/buttons";
+
+@import  "../../assets/sass/layouts/wrapper";
+
+
+@import  "../../assets/sass/components/header";
+@import  "../../assets/sass/components/Start-screen-content";
+@import  "../../assets/sass/components/About-content";
+@import  "../../assets/sass/components/Pets-content";
+@import  "../../assets/sass/components/Help-content";
+@import  "../../assets/sass/components/Donation";
+@import  "../../assets/sass/components/footer";
+@import  "../../assets/sass/base/modal";
+
+article.First-page{
+    background-image: url("../../assets/images/start-screen-gradient-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+article.Second-page{
+    position: relative;
+    background:#fff;
+    z-index: 1;
+}
+article.Third-page{
+    position: realtive;
+    background:#F6F6F6;   
+    z-index: 1;
+    text-align: center;
+}
+article.Fourth-page{
+    position: realtive;
+    background: #fff;
+    z-index: 1;
+    text-align: center;
+}
+article.Fifth-page{
+    position: realtive;  
+    background: #F6F6F6;
+    z-index: 1;
+    text-align: center;
+}
+h2{
+    font: {
+        family: $font_serif;
+        style: normal;
+        size: 44px;
+        weight: 400;
+      }
+      color:#ffff;
+      line-height: 130%;
+      @include respond-to(small-devices){
+        @include h3-mobile;
+        
+    }
+    }
+h3{ font: {
+        family: $font_serif;
+        style: normal;
+        size: 35px;
+        weight: 400;
+      }
+      letter-spacing: 0.06em;
+      line-height: 130%;
+      text-align: center;
+      @include respond-to(small-devices){
+        @include h3-mobile;
+        
+    }
+h4{
+   font-family: $font_serif;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 115%;
+   letter-spacing: 0.06em;}
+h5{
+   font-family: $font_serif;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 15px;
+   line-height: 110%;
+   letter-spacing: 0.06em;
+   }
+}

@@ -1,0 +1,129 @@
+.Donation{
+    position: relative;
+    padding: 80px 0 75px ;
+    margin: 0 136px 0 140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include respond-to(tablet){
+        margin: 0 136px 0 190px;
+        padding: 80px 0 103px ;
+        }
+      
+        .Donation_Heading,.Donation_Subheading{
+        color:#545454;
+        margin:0 0 20px 0;
+        text-align: left;
+        @include respond-to(small-devices){
+            margin:0 0 24px 0;
+            }
+        
+    }
+    @include respond-to(small-devices){
+        margin: auto;
+        padding: 40px 20px 0 20px ;
+        justify-content: center;
+        }
+       
+    
+    .Donation_Heading{
+        letter-spacing: 0.06em;
+        @include respond-to(small-devices){
+            text-align: center;
+            }
+    }
+    .Donation_Subheading{
+        font-size: 15px;
+        line-height: 110%;
+        
+        
+    }
+    .Donation__Content{
+        display:flex;
+        flex-direction: column;
+        position:relative;
+        max-width:380px;
+        
+        .Donation__Credit-card-content{
+            position:relative;
+            max-width:349px;
+            background-color: $color_primary;
+            border-radius:9px;
+            font-family: $font_serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 115%;
+            padding: 10px 0;
+            display: inline;
+            @include respond-to(small-devices){
+                max-width:281px;
+                font-size: 15px;
+                padding: 13px 0;
+                }
+            &:hover{
+                background-color:$color_primary_hover;
+                cursor: pointer;
+            }
+            p{
+                padding: 0;
+                margin: 0;
+            &:before{
+                content:'';
+                background-image: url("../../assets/icons/credit-card.svg");
+                width:30px;
+                height:23px;
+                left: 0;
+                position: absolute;
+                display: inline-block;
+                z-index: 3;
+                margin: 0 15px;
+               
+            }
+        }
+        }
+        .Donation_Legal-information{
+           color: #B2B2B2;
+           font-family: $font_sansserif;
+           font-style: italic;
+           font-weight: 400;
+           font-size: 12px;
+           line-height: 18px;
+           text-align: left;
+           padding-top:20px;
+           @include respond-to(tablet){
+            padding-top:8px;
+            }
+            @include respond-to(small-devices){
+                padding-top:8px;
+                text-align: justify;
+                }
+        }
+    }
+    .Donation_Donation-dog{
+       
+        position: relative;
+        width:505px;
+        height: 261px;
+        margin: 14px 30px 10px 0;
+        background-image: url("../../assets/images/donation-dog.png");
+        @include respond-to(tablet){
+            order:2;
+            margin: 44px 0 0 -58px;
+            
+            }
+            @include respond-to(small-devices){
+                width: 260px;
+                height: 135.2px;
+                background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+                order:2;
+                margin-bottom: 39px;
+                
+                }
+            
+
+    }
+}

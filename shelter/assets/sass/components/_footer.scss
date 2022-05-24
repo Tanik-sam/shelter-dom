@@ -1,0 +1,164 @@
+footer{
+    margin: auto;
+    position: relative;
+    background-image: url("../../assets/images/start-screen-gradient-background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: 1;
+}
+    .Footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top:40px;
+    
+    @include respond-to(tablet){
+       padding-left: 64px;
+       padding-top:15px;
+       padding-bottom: 33px;
+       }
+       @include respond-to(small-devices){
+        justify-content: center;
+        padding-top:0;
+        }
+    }
+
+    .Footer__item{
+        margin-right: 160px;
+        @include respond-to(tablet){
+        margin-right: 60px;
+        }
+        @include respond-to(small-devices){
+            margin: 0;
+            padding-left: 10px;
+            padding-top:0;
+            padding-right: 10px;
+            }
+            
+    }
+   .Footer_item-1{
+       max-width: 290px;
+       @include respond-to(small-devices){
+        max-width: 300px;
+        padding-top: 30px;
+        }
+   }
+    .Footer_item-2{
+        max-width: 290px;
+        @include respond-to(small-devices){
+            max-width: 300px;
+            padding-top: 30px;
+            }
+            @include respond-to(small-mob){
+                max-width: 300px;
+                padding-top: 8px;
+                }
+    }
+    .Footer_Heading{
+        font-family: $font_serif;
+        color:#fff;
+        text-align: left;
+        margin: 16px 0 40px 0;   
+        @include respond-to(small-devices){
+            text-align: center;
+            margin: 0 0 40px 0;
+        }
+    }
+    .Footer_Subheading{
+        font-family:$font_serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        color:$color_primary;
+        margin-bottom: 40px;
+        @include respond-to(small-devices){
+            
+            text-align: center;
+        }
+        
+    }
+.email{
+        position: relative;
+        margin: 0 0 50px 60px;
+        a{
+            text-decoration: none;
+            color:$color_primary;
+        }
+        &:before{
+            content:'';
+            background-image: url("../../assets/icons/icon-email.svg");
+            width:40px;
+            height:32px;
+            left: -60px;
+            position: absolute;
+            display: inline-block;
+            z-index: 3;
+            margin: 0;
+        }}
+.phone{
+            position: relative;
+            margin: 0 0 40px 60px;
+            a{
+                text-decoration: none;
+                color:$color_primary;
+            }
+            &:before{
+                content:'';
+                background-image: url("../../assets/icons/icon-phone.svg");
+                width:40px;
+                height:32px;
+                left: -60px;
+                position: absolute;
+                display: inline-block;
+                z-index: 3;
+                margin: 0;
+               
+            }}
+
+          
+
+ .addr{
+     position: relative;
+     margin: 0 0 30px 40px;
+     @include respond-to(tablet){
+        margin: -10px 0 40px 40px;
+        }
+     a{
+        text-decoration: none;
+        color:$color_primary;
+    }
+    &:before{
+        content:'';
+        background-image: url("../../assets/icons/icon-marker.svg");
+        width:22px;
+        height:32px;
+        left: -40px;
+        position: absolute;
+        display: inline-block;
+        z-index: 3;
+        margin:0;
+    }}
+
+    
+.Footer__item-image{
+    position: relative;
+        width:300px;
+        height: 310px;
+        background-image: url("../../assets/images/footer-puppy.png");
+        @include respond-to(tablet){
+            top:33px;
+            left:-36px;
+            margin: auto;
+            }
+            @include respond-to(small-devices){
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                width:260px;
+                height: 269px;
+                margin: auto;
+               margin-top:30px
+                }
+}

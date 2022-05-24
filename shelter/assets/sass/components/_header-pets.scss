@@ -1,0 +1,147 @@
+header{
+    position: fixed;
+    left:0;
+    right: 0;
+    top:0;
+    z-index: 5;
+    padding: 12px 40px 16px 40px;
+    background-color: #fff;
+    @include respond-to(tablet) { 
+        padding: 9px  27px 20px 27px;
+    }
+    @include respond-to(small-devices) { 
+        padding: 9px  7px 16px 7px;
+    }
+   
+}
+.logo{
+    position: relative;
+    max-width:200px;
+    @include respond-to(tablet) { max-width:210px ;}
+   .title{ 
+        @include title-text-large-dark;
+        margin-bottom:10px;
+        a{
+            text-decoration: none;
+            color:$color_dark;
+         }  
+    }
+   .subtitle{ 
+        @include title-text-small-dark;
+        margin:10px 0;
+        padding-left:4px;
+    }
+}
+nav{
+    margin-top:26px;
+}
+.nav-menu{
+    a{
+        text-decoration: none;
+        display:inline-block;
+        color:#CDCDCD;    
+        &:hover{
+              color:$color-radk-3xl;  
+           }
+       }
+    >*{
+        list-style: none;
+        @include paragraph-l;
+        margin: 0 0 0 40px;
+        &:nth-child(2){
+           border-bottom: 3px solid $color_primary;
+           color:$color-light-s;
+        }
+    }
+    display:flex;
+    flex-direction: row;
+    justify-content: right;
+    @include respond-to(small-tablet) { display: none;}
+    @include respond-to(big-mob) { display: none;}
+    @include respond-to(small-mob) { display: none;}  
+}
+.hamburger-menu{
+    @include respond-to(full-screen) { display: none} ;
+    @include respond-to(tablet) { display: none;}
+    @include respond-to(small-tablet) { display: block;}
+    @include respond-to(big-mob) { display: block;}
+    @include respond-to(small-mob) { display: block;}
+}
+
+@include respond-to(small-devices){
+.active {
+    &:after{
+        content: '';
+        z-index: 1;
+        position: absolute;
+        left: -100vw;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: $color-overlay;
+        opacity: 50%;
+    }
+    .header_wrapper{
+        max-width: 320px;
+        display: block;  
+    }
+    transition: all .8s ease-out;
+    visibility: visible;
+    right: 0;
+    position: fixed;
+    top: 0;
+    left: calc(100% - 320px);
+    width: 320px;
+    height: 100%;
+    margin: 0;
+    padding: 9px 10px 0 0;
+    list-style: none;
+    text-align: center;
+    background-color: $color-radk-3xl;
+    z-index: 5;
+    .title{ 
+    @include title-text-large;
+        margin-bottom:10px;
+        a{
+            text-decoration: none;
+            color:$color_primary;
+        }
+    }
+    .subtitle{ 
+    @include title-text-small;
+    margin:10px 0;
+    padding-left:4px;
+    }
+    .nav-menu{
+        display: block;
+        padding: 0 30px 0 30px;
+        list-style: none;
+        >*{margin-left: 0;}
+    }
+    .nav-menu__item{
+        list-style: none;
+        margin-left: 0 !important;
+        display: block;
+        padding-top: 40px;
+        @include paragraph-mob;
+        text-decoration: none;
+        &:hover {
+            background-color: $color-light-s;
+        } 
+        color: $color_dark_hover;
+        &:nth-child(2){
+            border-bottom: 3px solid $color_primary;
+            a{
+                color:$color-light-s;
+            }
+        }
+    }
+  
+}
+}
+.menu__button > span,
+.menu__button > span::before,
+.menu__button > span::after {
+  background-color: $color_dark2;
+}
+

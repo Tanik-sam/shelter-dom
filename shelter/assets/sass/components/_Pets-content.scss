@@ -1,0 +1,164 @@
+.Pets-content{
+    
+    .Pets__Content{
+        position:relative;
+        margin: 0;
+        margin-top: 80px;
+        
+        text-align: center;
+        color:#545454;
+        .Pets_Heading{
+            padding-top:80px;
+            margin-left:-6px;
+            letter-spacing: 0.06em;
+            @include respond-to(small-devices){
+                margin-top: 40px;
+                padding-top:41px;
+                
+            }
+        }
+        .pagination_back{    
+            cursor: pointer;
+            background-image: url("../../assets/icons/Arrow-left.svg");
+            left: 20px;
+            top:420px;
+            @include respond-to(tablet){
+                left: 17px;
+            }
+            @include respond-to(small-devices){
+                margin-left:43px;
+                top:600px;
+            }
+        }
+            
+           .pagination_front{   
+            cursor: pointer;    
+                background-image: url("../../assets/icons/Arrow-right.svg");
+                right: 20px;
+                top:420px;
+                display: inline-block;
+                @include respond-to(tablet){
+                    right: 17px;
+                }
+                @include respond-to(small-devices){
+                    margin-right:43px;
+                    top:600px;
+                }
+            }
+        .modal{
+            display:none;
+        }    
+        .Pets__Slider{
+            margin: 60px 60px 0 60px;
+            padding-bottom: 74px;
+            overflow: hidden;
+            @include respond-to(small-devices){
+                margin-bottom: 56px;
+                margin-top: 42px;
+                }
+            }
+        .wrapper_slider{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content:center;  
+            left:0px;
+
+             .hidden_card{
+                 display:none;
+             }
+             .card_conteiner {
+                 display: flex;
+                 flex-direction: row;
+                 flex-wrap: nowrap;
+                 margin: 0;
+                 padding: 0;
+                 max-width: fit-content;
+                 @include respond-to(tablet){
+                    &>:nth-child(3){
+                        display:none;
+                        
+                    }
+                }
+                @include respond-to(small-devices){
+                    &>:nth-child(2){
+                            display:none;
+                        }
+                        &>:nth-child(3){
+                            display:none;
+                        }
+                    }
+             }
+            .Pets__Card{
+                border-radius: 10px;
+                margin-left:45px;
+                margin-right: 45px;
+                background-color: #fff;
+                height:435px;
+                width: 270px;
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: 0px 2px 35px 14px rgba(54, 54, 54, 0.06);
+                }
+                p{
+                    position: relative;
+                    font-family: $font_serif;
+                    font-size: 20px;
+                    line-height: 23px;
+                    margin:22px 0 18px 0 ; 
+                }
+             img{
+                 margin: 0;
+             }
+             .Button_light{
+                 top:30px;
+             }
+            }
+        }
+        padding-bottom: 114px;
+        @include respond-to(small-devices){
+            padding-bottom: 57px;
+            }
+    }
+}
+@keyframes move-right {
+    from {left: 0px;}
+    to {left: -1080px;}
+  }
+@include respond-to(tablet){
+    @keyframes move-right {
+    from {left: 0px;}
+    to {left: -720px;}
+    }
+}
+@include respond-to(small-devices){
+    @keyframes move-right {
+    from {left: 0px;}
+    to {left: -360px;}
+    }
+}  
+  .transition-right {
+    animation-name: move-right;
+    animation-duration: 5s;
+  }
+  @keyframes move-left {
+    from {left: 0px;}
+    to {left: 1080px;}
+  }
+  @include respond-to(tablet){
+    @keyframes move-left {
+        from {left: 0px;}
+        to {left: 720px;}
+    }
+}
+@include respond-to(small-devices){
+    @keyframes move-left {
+        from {left: 0px;}
+        to {left: 360px;}
+    }
+} 
+  .transition-left {
+    animation-name: move-left;
+    animation-duration: 5s;
+  }
